@@ -118,5 +118,53 @@
 - RAIL というパフォーマンス指標
   - Response 100 ミリ秒
   - Animation 16 ミリ秒
-  - Idle
-  - Load
+    - フレーム中の 1 フレームの処理の時間の目安
+  - Idle 50 ミリ秒
+  - Load 1000 ミリ秒
+
+## 3.5
+
+- Network パネル
+  - 青い線は DOMContentLoaded
+  - 赤い線は Load イベントが発生した時点
+- Memory パネル
+  - メモリの利用状況を計測できる
+  - メモリリークの検知
+  - メモリの使いすぎ
+- JS によるパフォーマンス計測もできる
+  - 計測用のコードを仕込む
+  - NavigationTimingAPI による計測
+    - ブラウザの各段階の処理時間を計測できる
+  - UserTimingAPI による計測
+  - ResourceTimingAPI による計測
+  - PerformanceObserver による継続的な計測
+  - 高精度なタイムスタンプの利用
+
+## 3.8
+
+- パフォーマンスの継続的な監視
+
+## 4.1
+
+- リソース取得の最適化
+  - 読み込むリソースの大きさと数を減らす
+  - レンダリングをブロックする読み込みを減らす
+  - ブラウザとサーバー間の遅延を減らす
+  - ブラウザのキャッシュを活用する
+
+## 4.3
+
+- 画像ファイルの最適化
+  - JPEG
+    - jpegtran
+    - mozjpeg
+  - PNG
+    - ZopfliPNG
+    - pngquant
+    - Pngcrush
+  - GIF
+    - GIFsicl
+
+## 4.5
+
+- CSS 内での外部 import は避ける
